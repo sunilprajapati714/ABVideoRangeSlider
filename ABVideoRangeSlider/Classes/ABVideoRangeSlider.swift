@@ -76,6 +76,13 @@ public class ABVideoRangeSlider: UIView, UIGestureRecognizerDelegate {
         super.init(coder: aDecoder)
     }
 
+    public func reSetup() {
+        for view in subviews {
+            view.removeFromSuperview()
+        }
+        setup()
+    }
+    
     private func setup(){
         self.isUserInteractionEnabled = true
 
